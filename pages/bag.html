@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Shopora</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#f6f5f2] text-gray-800">
+    <!-- ================= SAME HEADER AS HOME ================= -->
+    <header
+      class="fixed top-1 left-0 w-full z-50 flex justify-center items-center"
+    >
+      <nav class="px-6 py-3 rounded-[20px] bg-white shadow-xl">
+        <ul class="flex justify-center items-center gap-4">
+          <li>
+            <a
+              href="#"
+              class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pages/shop.html"
+              class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+              >Log</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pages/bag.html"
+              class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+              >Bag</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="bg-[#eae7e1] py-14 text-center px-4">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-3">Your Cart</h2>
+      <p class="text-gray-600">Review your selected items</p>
+    </section>
+
+    <!-- ================= CART SECTION ================= -->
+    <section class="max-w-7xl mx-auto px-4 md:px-6 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- CART ITEMS -->
+        <div class="lg:col-span-2 space-y-8">
+          <!-- ITEM -->
+          <div class="bg-white p-6 shadow-sm flex flex-col sm:flex-row gap-6">
+            <img
+              src="https://images.unsplash.com/photo-1520975922284-9d7b6b8e7f2b?auto=format&fit=crop&w=800&q=80"
+              class="w-full sm:w-40 h-40 object-cover rounded"
+            />
+
+            <div class="flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-medium text-lg">Minimal White Shirt</h3>
+                <p class="text-gray-500 text-sm mt-1">Size: M</p>
+                <p class="text-gray-500 text-sm">Color: White</p>
+              </div>
+
+              <div
+                class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mt-4"
+              >
+                <div class="flex items-center border w-fit">
+                  <button class="px-3 py-1">-</button>
+                  <span class="px-4">1</span>
+                  <button class="px-3 py-1">+</button>
+                </div>
+
+                <p class="font-medium">$59</p>
+
+                <button class="text-red-500 text-sm flex items-center gap-1">
+                  <i class="ri-delete-bin-line"></i> Remove
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ORDER SUMMARY -->
+        <div class="bg-white p-8 shadow-sm h-fit lg:sticky lg:top-28">
+          <h3 class="text-xl font-semibold mb-6">Order Summary</h3>
+
+          <div class="space-y-4 text-sm">
+            <div class="flex justify-between">
+              <span>Subtotal</span>
+              <span>$317</span>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Shipping</span>
+              <span>$20</span>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Tax</span>
+              <span>$15</span>
+            </div>
+
+            <hr />
+
+            <div class="flex justify-between font-semibold text-lg">
+              <span>Total</span>
+              <span>$352</span>
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-black text-white py-3 mt-8 hover:bg-gray-800 transition text-sm tracking-widest"
+          >
+            PROCEED TO CHECKOUT
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-black text-white py-12 text-center text-sm">
+      © 2026 Shopora. All Rights Reserved.
+    </footer>
+  </body>
+</html>

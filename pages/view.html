@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full py-10 px-3 flex justify-center items-center">
+      <header
+        class="fixed top-1 left-0 w-full z-50 flex justify-center items-center"
+      >
+        <nav class="px-6 py-3 rounded-[20px] bg-white shadow-xl">
+          <ul class="flex justify-center items-center gap-4">
+            <li>
+              <a
+                href="/pages/indext.htm"
+                class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/shop.html"
+                class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+                >Log</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+                >Bag</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="w-full max-w-4xl flex flex-col md:flex-row gap-10 mt-10 p-2">
+        <!-- LEFT SECTION -->
+        <div class="w-full md:w-1/2 h-[550px] md:h-[650px]">
+          <!-- Main Image -->
+          <img
+            id="mainImage"
+            src=""
+            alt="Product Image"
+            class="w-full h-full object-cover rounded-lg border border-zinc-200"
+          />
+        </div>
+
+        <!-- RIGHT SECTION -->
+        <div class="w-full md:w-1/2 flex flex-col gap-2">
+          <!-- Product Info -->
+          <div>
+            <h3 id="item-name" class="text-xl font-semibold uppercase">
+              Infuser Bottle
+            </h3>
+            <p id="item-category" class="text-gray-600 text-sm mt-1">
+              Kitchen Essentials
+            </p>
+            <p id="item-price" class="text-xl font-medium text-red-600 mt-2">
+              ₹ 999
+            </p>
+          </div>
+
+          <!-- Thumbnails - ALL DEVICES -->
+          <div
+            id="item-thumbnails"
+            class="grid grid-cols-6 w-full gap-4 mt-4 overflow-x-auto pb-2"
+          ></div>
+
+          <!-- Size Options -->
+          <div>
+            <h4 class="font-medium text-lg mb-2">Select Size</h4>
+            <div id="item-size" class="grid grid-cols-6 gap-3"></div>
+          </div>
+
+          <!-- Delivery & Payment -->
+          <div class="border-b pb-4">
+            <div
+              class="flex justify-between items-center cursor-pointer"
+              onclick="toggleDP()"
+            >
+              <h4 class="text-lg font-semibold">Delivery & Payment</h4>
+              <span id="dpIcon" class="text-2xl text-pink-500">+</span>
+            </div>
+
+            <p class="text-gray-700 text-sm mt-3 hidden">
+              • Free Delivery Available <br />
+              • Cash on Delivery Available <br />
+              • Secure Online Payment <br />
+              • Delivery within 3–5 Days
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 mt-4">
+            <button
+              class="px-6 py-2 text-white rounded-md bg-pink-500 hover:bg-pink-600 transition active:scale-95"
+            >
+              Add to Bag
+            </button>
+            <button
+              class="px-6 py-2 text-white rounded-md bg-pink-500 hover:bg-pink-600 transition active:scale-95"
+            >
+              Add to Favorites
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/scripts/view.js"></script>
+    <script type="module" src="/scripts/common.js"></script>
+  </body>
+</html>

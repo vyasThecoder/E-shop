@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-shop</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full flex justify-center items-center flex-col">
+      <header
+        class="fixed top-1 left-0 w-full z-50 flex justify-center items-center"
+      >
+        <nav class="px-6 py-3 rounded-[20px] bg-white shadow-xl">
+          <ul class="flex justify-center items-center gap-4">
+            <li>
+              <a
+                href="../indext.htm"
+                class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+                >Log</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-2 py-1 uppercase cursore-pointer active:scale-95 hover:text-gray-500 font-medium"
+                >Bag</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!--  -->
+      <div class="w-full md:py-20 border-b border-gray-200 py-10 px-4">
+        <!-- Heading -->
+        <h1
+          class="mb-6 md:mb-20 text-xl md:text-3xl font-semibold uppercase text-center"
+        >
+          Shop
+        </h1>
+        <!--  -->
+        <div
+          id="shop-card-container"
+          class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-8"
+        >
+          <!-- Dynamically Inserted Cards -->
+        </div>
+      </div>
+      <!-- fotter -->
+      <footer class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Brand Info -->
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold text-gray-800">E-Shop</h2>
+            <p class="text-gray-600">
+              Your one-stop shop for stylish, handcrafted dresses. Quality and
+              comfort, delivered.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="space-y-4">
+            <h3 class="font-semibold text-lg text-gray-800">Quick Links</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>
+                <a href="#" class="hover:text-pink-700 transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-700 transition-colors"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-700 transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-700 transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Customer Support -->
+          <div class="space-y-4">
+            <h3 class="font-semibold text-lg text-gray-800">
+              Customer Support
+            </h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>
+                <a href="#" class="hover:text-pink-700 transition-colors"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-700 transition-colors"
+                  >Shipping</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-700 transition-colors"
+                  >Returns</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-700 transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="space-y-4">
+            <h3 class="font-semibold text-lg text-gray-800">Newsletter</h3>
+            <p class="text-gray-600">
+              Subscribe to get the latest updates and offers.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-700"
+              />
+              <button
+                type="submit"
+                class="bg-pink-700 text-white font-semibold px-4 py-2 rounded-lg hover:bg-pink-600 transition-all"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div
+          class="mt-10 border-t border-gray-200 pt-6 text-center text-gray-500 text-sm"
+        >
+          &copy; 2025 E-Shop. All rights reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/scripts/shop.js"></script>
+    <script type="module" src="/scripts/common.js"></script>
+  </body>
+</html>
