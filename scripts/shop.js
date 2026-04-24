@@ -1,20 +1,18 @@
 import AllProducts from "../Data/Allproducts.js";
-import { viewProduct } from "./common.js";
-
 
 function renderShopCards() {
   const shopContainer = document.querySelector("#shop-card-container");
 
   AllProducts.forEach((product) => {
     shopContainer.innerHTML += `
-        <div   class="rounded-xl border border-pink-600 shadow-xl hover:shadow-none duration-300 overflow-hidden group transition-all ease-in-out">
+        <div class=rounded-xl border border-pink-600 shadow-xl hover:shadow-none duration-300 overflow-hidden group transition-all ease-in-out">
           
           <!-- Product Image -->
           <img
             src="${product.images[0]}"
-            onclick="viewProduct(${product.id})"
             alt="product image"
-            class="w-full h-36 sm:h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300 ease-in-out"
+            data-prodcut=${product.id}
+            class="product-image w-full h-36 sm:h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300 ease-in-out"
             loading="lazy"
           />
 
@@ -45,11 +43,18 @@ renderShopCards();
 let buttons = document.querySelectorAll(".addCart");
 
 buttons.forEach((btn) => {
-  console.log(btn);
-
   btn.addEventListener("click", function (b) {
     console.log(b);
 
     let product = this.dataset.id;
+  });
+});
+
+let productImage = document.querySelectorAll(".product-image");
+
+productImage.forEach((card) => {
+  card.addEventListener("click", function (prodcut) {
+    let product = this.dataset.id;
+    console.log("", prodcut);
   });
 });
