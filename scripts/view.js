@@ -1,73 +1,38 @@
-import Allproducts from "../Data/Allproducts.js";
+import { products } from "../Data/Allproducts.js";
 
-const productId = localStorage.getItem("productId");
-const product = Allproducts.find((item) => item.id == productId);
+function renderMainProduct() {
+  const data = JSON.parse(localStorage.getItem("viewProduct"));
 
-if (!product) {
-  console.error("Product not found!");
-}
+  const product = data[0];
 
-let imageIndex = 0;
+  let mainImageIndex = 0;
 
+  document.getElementById("mainImage").src = product.images[mainImageIndex];
+  document.getElementById("product-title").innerText = product.name;
+  document.getElementById("product-category").innerText = product.category;
+  document.getElementById("product-price").innerText = product.price;
 
-function initProductPage() {
-  renderBasicDetails();
-  renderMainImage();
-  renderThumbnails();
-  renderSizes();
-}
-initProductPage();
+  document.getElementById("product-thumbnails").innerHTML = "";
 
+  product.images.forEach((image, index) => {
+    document.getElementById("product-thumbnails");
+    //   .classList.add(`grid-cols-${product.images.length}`);
+    document.getElementById("product-thumbnails").innerHTML += `
+        <img src="${image}"
+        id="${index}"
+         alt="thumbnails-image"
+            class="tumbnails-images h-18 cursor-pointer active:scale-95 object-cover rounded-lg border"/>`;
+  });
 
-function renderBasicDetails() {
-  document.getElementById("item-name").innerText = product.name;
-  document.getElementById("item-category").innerText = product.category;
-  document.getElementById("item-price").innerText = "₹ " + product.price;
-}
+  const tumbnailsImages = document.querySelectorAll(".tumbnails-images");
 
-
-function renderMainImage() {
-  document.getElementById("mainImage").src = product.images[imageIndex];
-}
-
-
-function renderThumbnails() {
-  const thumbBox = document.getElementById("item-thumbnails");
-  thumbBox.innerHTML = "";
-
-  product.images.forEach((img, index) => {
-    thumbBox.innerHTML += `
-      <img
-        src="${img}"
-        onclick="changeImage(${index})"
-        class="w-20 h-20 rounded-lg object-cover cursor-pointer border transition
-        ${
-          imageIndex === index
-            ? "border-2 border-pink-600 scale-80"
-            : "border-gray-300"
-        }
-      "
-      />
-    `;
+  tumbnailsImages.forEach((image) => {
+    image.addEventListener("click", (val) => {
+      const index = val.target.id;
+      mainImageIndex = index;
+      document.getElementById("mainImage").src = product.images[mainImageIndex];
+      image.classList.add("border-red-900");
+    });
   });
 }
-
-
-function renderSizes() {
-  const sizeBox = document.getElementById("item-size");
-  sizeBox.innerHTML = "";
-
-  product.size.forEach((size) => {
-    sizeBox.innerHTML += `
-      <button class="py-2 border border-gray-700 rounded-md hover:bg-black hover:text-white transition">
-        ${size}
-      </button>`;
-  });
-}
-
-
-window.changeImage = function (index) {
-  imageIndex = index;
-  renderMainImage();
-  renderThumbnails(); 
-};
+renderMainProduct();

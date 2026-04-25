@@ -1,4 +1,4 @@
-let products = [
+export const products = [
   {
     id: "1",
     name: "hot chocolate dress",
@@ -6,11 +6,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/A01.avif",
-      "assets/Productimage/A02.avif",
-      "assets/Productimage/A03.avif",
-      "assets/Productimage/A04.avif",
-      "assets/Productimage/A05.avif",
+      "../assets/Productimage/A01.avif",
+      "../assets/Productimage/A02.avif",
+      "../assets/Productimage/A03.avif",
+      "../assets/Productimage/A04.avif",
+      "../assets/Productimage/A05.avif",
     ],
     description: [
       "⁠Tailored perfectly to give a snatched look ⁠Front row of hooks, designer straps Corsetry hot-fit Wear it when you want to look in your best shape!",
@@ -25,11 +25,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/B06.jpg",
-      "assets/Productimage/B07.webp",
-      "assets/Productimage/B08.avif",
-      "assets/Productimage/B09.avif",
-      "assets/Productimage/B10.avif",
+      "../assets/Productimage/B06.jpg",
+      "../assets/Productimage/B07.webp",
+      "../assets/Productimage/B08.avif",
+      "../assets/Productimage/B09.avif",
+      "../assets/Productimage/B10.avif",
     ],
     description: [
       "Flowy large flare ⁠Fine tailoring of layers Pleated-bust and snatched waist Blush rose color for a feminine touch✨ Designer straps- for a gorgeous look Easy to style, comfortable to wear",
@@ -44,10 +44,10 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/C11.webp",
-      "assets/Productimage/C12.webp",
-      "assets/Productimage/C13.avif",
-      "assets/Productimage/C14.avif",
+      "../assets/Productimage/C11.webp",
+      "../assets/Productimage/C12.webp",
+      "../assets/Productimage/C13.avif",
+      "../assets/Productimage/C14.avif",
     ],
     description: [
       "The dress of your dreams 3D Flowers Clinched waist design Padded Back Zipper",
@@ -62,10 +62,10 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/D15.avif",
-      "assets/Productimage/D16.webp",
-      "assets/Productimage/D17.avif",
-      "assets/Productimage/D18.avif",
+      "../assets/Productimage/D15.avif",
+      "../assets/Productimage/D16.webp",
+      "../assets/Productimage/D17.avif",
+      "../assets/Productimage/D18.avif",
     ],
     description: [
       "Flowy large flare ⁠Fine tailoring of layers Pleated-bust and snatched waist Vintage rose print for a feminine touch✨ Designer straps- for a gorgeous look Easy to style, comfortable to wear",
@@ -80,10 +80,10 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/E19.webp",
-      "assets/Productimage/E20.jpg",
-      "assets/Productimage/E21.avif",
-      "assets/Productimage/E22.webp",
+      "../assets/Productimage/E19.webp",
+      "../assets/Productimage/E20.jpg",
+      "../assets/Productimage/E21.avif",
+      "../assets/Productimage/E22.webp",
     ],
     description: [
       "Modest & decent to wearRuched bust and waist for a snatched look🤌🏻Multiple layers for a large flare to give a cutesy doll-lookDetachable puff sleeves, can be worn in 2-waysPerfect to wear at any place!",
@@ -98,10 +98,10 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/G23.webp",
-      "assets/Productimage/G24.webp",
-      "assets/Productimage/G25.avif",
-      "assets/Productimage/G26.webp",
+      "../assets/Productimage/G23.webp",
+      "../assets/Productimage/G24.webp",
+      "../assets/Productimage/G25.avif",
+      "../assets/Productimage/G26.webp",
     ],
     description: [
       "Color is just NEXT LEVEL beautiful! Doll-like lookBig flare (multiple layers beneath flare) Big bow at the back Detachable Puffy sleeves Fits perfectly, Back zipper, adjustable straps",
@@ -116,10 +116,10 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/H27.avif",
-      "assets/Productimage/H28.avif",
-      "assets/Productimage/H29.avif",
-      "assets/Productimage/H30.avif",
+      "../assets/Productimage/H27.avif",
+      "../assets/Productimage/H28.avif",
+      "../assets/Productimage/H29.avif",
+      "../assets/Productimage/H30.avif",
     ],
     description: [
       "Heavy hand-work dress Fully beaded with pearls and stones Big brooch Full sleeves Perfect for any occasion!",
@@ -134,10 +134,10 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/I31.avif",
-      "assets/Productimage/I32.avif",
-      "assets/Productimage/I33.avif",
-      "assets/Productimage/I34.avif",
+      "../assets/Productimage/I31.avif",
+      "../assets/Productimage/I32.avif",
+      "../assets/Productimage/I33.avif",
+      "../assets/Productimage/I34.avif",
     ],
     description: [
       "Elegant & Timeless flare dress ⁠Flattering sculpted neckline (looks like the wings of a swan) ⁠Luxury fabric & finish ⁠Beautifully stands out from the normal crowd",
@@ -152,10 +152,10 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/J35.webp",
-      "assets/Productimage/J36.webp",
-      "assets/Productimage/J37.webp",
-      "assets/Productimage/J38.webp",
+      "../assets/Productimage/J35.webp",
+      "../assets/Productimage/J36.webp",
+      "../assets/Productimage/J37.webp",
+      "../assets/Productimage/J38.webp",
     ],
     description: [
       "Luxurious sparkle flare dress ⁠Pearl-embellished full sleeves ⁠Pretty bow at the back (detachable) ⁠Perfect for special moments",
@@ -170,11 +170,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/K39.webp",
-      "assets/Productimage/K40.webp",
-      "assets/Productimage/K41.webp",
-      "assets/Productimage/K42.webp",
-      "assets/Productimage/K43.webp",
+      "../assets/Productimage/K39.webp",
+      "../assets/Productimage/K40.webp",
+      "../assets/Productimage/K41.webp",
+      "../assets/Productimage/K42.webp",
+      "../assets/Productimage/K43.webp",
     ],
     description: [
       "Premium quality  Backless & Padded Puff sleeves Breezy for your summer days",
@@ -189,11 +189,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/L44.webp",
-      "assets/Productimage/L45.webp",
-      "assets/Productimage/L46.webp",
-      "assets/Productimage/L47.webp",
-      "assets/Productimage/L48.webp",
+      "../assets/Productimage/L44.webp",
+      "../assets/Productimage/L45.webp",
+      "../assets/Productimage/L46.webp",
+      "../assets/Productimage/L47.webp",
+      "../assets/Productimage/L48.webp",
     ],
     description: [
       " Elegant & Timeless flare dress ⁠Flattering sculpted neckline (looks like the wings of a swan) ⁠Luxury fabric & finish ⁠Beautifully stands out from the normal crowd",
@@ -208,11 +208,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/M49.webp",
-      "assets/Productimage/M50.webp",
-      "assets/Productimage/M51.webp",
-      "assets/Productimage/M52.webp",
-      "assets/Productimage/M53.webp",
+      "../assets/Productimage/M49.webp",
+      "../assets/Productimage/M50.webp",
+      "../assets/Productimage/M51.webp",
+      "../assets/Productimage/M52.webp",
+      "../assets/Productimage/M53.webp",
     ],
     description: [
       "Gorgeous in every way, perfect for any occasion Pretty 3D flowers neckline Designer neck drape Fits so well on your curvesLoops given to attach strapsPadded",
@@ -227,11 +227,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/N54.webp",
-      "assets/Productimage/N55.webp",
-      "assets/Productimage/N56.webp",
-      "assets/Productimage/N57.webp",
-      "assets/Productimage/N58.webp",
+      "../assets/Productimage/N54.webp",
+      "../assets/Productimage/N55.webp",
+      "../assets/Productimage/N56.webp",
+      "../assets/Productimage/N57.webp",
+      "../assets/Productimage/N58.webp",
     ],
     description: [
       "This dress is just WOW!! Perfectly fitting  Attached lining inside Full sleeves Modest & classy, can be styled anywhere easily!",
@@ -246,11 +246,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/O59.webp",
-      "assets/Productimage/O60.webp",
-      "assets/Productimage/O61.webp",
-      "assets/Productimage/O62.webp",
-      "assets/Productimage/O63.webp",
+      "../assets/Productimage/O59.webp",
+      "../assets/Productimage/O60.webp",
+      "../assets/Productimage/O61.webp",
+      "../assets/Productimage/O62.webp",
+      "../assets/Productimage/O63.webp",
     ],
     description: [
       "This dress is just WOW!!Perfectly fitting Attached lining insideFull sleevesModest & classy, can be styled anywhere easily!",
@@ -265,11 +265,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/P64.webp",
-      "assets/Productimage/P65.webp",
-      "assets/Productimage/P66.webp",
-      "assets/Productimage/P67.webp",
-      "assets/Productimage/P68.webp",
+      "../assets/Productimage/P64.webp",
+      "../assets/Productimage/P65.webp",
+      "../assets/Productimage/P66.webp",
+      "../assets/Productimage/P67.webp",
+      "../assets/Productimage/P68.webp",
     ],
     description: [
       "Luxurious and classy ⁠Modest full sleeves ⁠Pleated flare, premium quality ⁠Perfect for elite social gatherings!",
@@ -284,11 +284,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/Q69.webp",
-      "assets/Productimage/Q70.webp",
-      "assets/Productimage/Q71.webp",
-      "assets/Productimage/Q72.webp",
-      "assets/Productimage/Q73.webp",
+      "../assets/Productimage/Q69.webp",
+      "../assets/Productimage/Q70.webp",
+      "../assets/Productimage/Q71.webp",
+      "../assets/Productimage/Q72.webp",
+      "../assets/Productimage/Q73.webp",
     ],
     description: [
       "Subtle sparkle flare dress ⁠Enriched lime color, instantly lifts your whole look ⁠Classy bow at the back (detachable) ⁠Perfect fit for any special occasion",
@@ -303,11 +303,11 @@ let products = [
     size: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "dresses,ready to ship",
     images: [
-      "assets/Productimage/R74.webp",
-      "assets/Productimage/R75.webp",
-      "assets/Productimage/R76.webp",
-      "assets/Productimage/R77.webp",
-      "assets/Productimage/R78.webp",
+      "../assets/Productimage/R74.webp",
+      "../assets/Productimage/R75.webp",
+      "../assets/Productimage/R76.webp",
+      "../assets/Productimage/R77.webp",
+      "../assets/Productimage/R78.webp",
     ],
     description: [
       "Modest & decent to wear Ruched bust and waist for a snatched look Multiple layers for a large flare to give a cutesy doll-look Detachable puff sleeves, can be worn in 2-ways Perfect to wear at any place!",
@@ -316,5 +316,3 @@ let products = [
     ],
   },
 ];
-
-export default products;

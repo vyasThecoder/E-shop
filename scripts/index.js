@@ -1,7 +1,8 @@
-import AllProducts from "../Data/Allproducts.js";
-import Influencers from "../Data/Infulesar.js";
-import CustomerReviews from "../Data/CustmerRev.js";
-import SpotLightData from "../Data/Sptotlight.js";
+import { products } from "../Data/Allproducts.js";
+import { influencer } from "../Data/Infulesar.js";
+import { customerReviews } from "../Data/CustmerRev.js";
+import { spotLight } from "../Data/Sptotlight.js";
+import { goToViewPageByID } from "./app.js";
 
 /* -----------------------------------------------------
     FUNCTION 1: Render "For You" product cards
@@ -10,16 +11,15 @@ import SpotLightData from "../Data/Sptotlight.js";
 function renderForYouCards() {
   const forYouContainer = document.querySelector("#for-you-card-container");
 
-  AllProducts.slice(0.4).forEach((product) => {
+  products.slice(0, 8).forEach((product) => {
     forYouContainer.innerHTML += `
         <div class="rounded-xl border border-pink-600 shadow-xl hSover:shadow-none duration-300 overflow-hidden group transition-all ease-in-out">
           
           <img
-            id="image"
-            onclick="viewProduct(${product.id})"
+            id="${product.id}"
             src="${product.images[0]}"
             alt="product image"
-            class="w-full h-36 sm:h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300 ease-in-out"
+            class="forYou-cards w-full h-36 sm:h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300 ease-in-out"
             loading="lazy"
           />
          
@@ -43,16 +43,27 @@ function renderForYouCards() {
   });
 }
 
+function renderViewPage() {
+  let cards = document.querySelectorAll(".forYou-cards");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", (val) => {
+      let ID = val.target.id;
+      goToViewPageByID(ID);
+    });
+  });
+}
+
 /* -----------------------------------------------------
     FUNCTION 2: Render Spotlight Video Cards
 ----------------------------------------------------- */
 
 function renderSpotlightCards() {
   const spotlightContainer = document.querySelector(
-    "#spot-light-card-container"
+    "#spot-light-card-container",
   );
 
-  SpotLightData.forEach((item) => {
+  spotLight.forEach((item) => {
     spotlightContainer.innerHTML += `
       <div class="w-80 h-[500px] rounded-xl overflow-hidden snap-center flex-shrink-0 shadow-xl group transition-all duration-300 ease-in-out">
         <video
@@ -73,20 +84,20 @@ function renderSpotlightCards() {
 
 function renderInfluencerCards() {
   const influencerContainer = document.querySelector(
-    "#our-influencer-card-container"
+    "#our-influencer-card-container",
   );
 
-  Influencers.forEach((person) => {
+  influencer.forEach((person) => {
     influencerContainer.innerHTML += `
       <div class="w-48 h-44 border-l border-r border-pink-600 rounded-xl shadow-xl hover:shadow-none duration-300 flex flex-col justify-center items-center">
-        
+
         <img
           src="${person.image}"
           alt="Influencer"
           loading="lazy"
           class="w-20 h-20 rounded-full object-cover object-center"
         />
-        
+
         <h3 class="mt-4 text-sm font-medium">${person.name}</h3>
       </div>
     `;
@@ -99,10 +110,10 @@ function renderInfluencerCards() {
 
 function renderCustomerReviewCards() {
   const reviewContainer = document.querySelector(
-    "#customer-love-card-container"
+    "#customer-love-card-container",
   );
 
-  CustomerReviews.forEach((review) => {
+  customerReviews.forEach((review) => {
     reviewContainer.innerHTML += `
       <div class="w-96 h-56 snap-start rounded-tl-[110px] bg-white shadow-xl hover:shadow-none duration-300 border-l-2 border-pink-600 flex flex-col justify-center items-center snap-center flex-shrink-0">
         
@@ -129,7 +140,7 @@ renderForYouCards();
 renderSpotlightCards();
 renderInfluencerCards();
 renderCustomerReviewCards();
-
+renderViewPage();
 // ----------------------------------------------------------------------
 
 gsap.registerPlugin(ScrollTrigger);
