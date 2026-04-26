@@ -43,6 +43,10 @@ function renderForYouCards() {
   });
 }
 
+/* -----------------------------------------------------
+    FUNCTION 1: Render "View Page" product Deteil
+----------------------------------------------------- */
+
 function renderViewPage() {
   let cards = document.querySelectorAll(".forYou-cards");
 
