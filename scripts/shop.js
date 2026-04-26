@@ -2,6 +2,8 @@ const shopCardContainer = document.getElementById("shop-card-container");
 import { products } from "../Data/Allproducts.js";
 import { goToViewPageByID } from "../scripts/app.js";
 
+let imagePath = "../"
+
 function renderProductCard() {
   shopCardContainer.innerHTML = "";
   products.forEach((item) => {
@@ -9,7 +11,7 @@ function renderProductCard() {
         <div class=rounded-xl border border-pink-600 shadow-xl hover:shadow-none duration-300 overflow-hidden group transition-all ease-in-out">
           <!-- Product Image -->
           <img
-            src="${item.images[0]}"
+            src="${imagePath+item.images[0]}"
             id="${item.id}"
             alt="product image"
             class="cards w-full h-36 sm:h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300 ease-in-out"

@@ -1,5 +1,7 @@
 import { products } from "../Data/Allproducts.js";
 
+let imagePath = "../";
+
 function renderMainProduct() {
   const data = JSON.parse(localStorage.getItem("viewProduct"));
 
@@ -7,7 +9,8 @@ function renderMainProduct() {
 
   let mainImageIndex = 0;
 
-  document.getElementById("mainImage").src = product.images[mainImageIndex];
+  document.getElementById("mainImage").src =
+    imagePath + product.images[mainImageIndex];
   document.getElementById("product-title").innerText = product.name;
   document.getElementById("product-category").innerText = product.category;
   document.getElementById("product-price").innerText = product.price;
@@ -18,7 +21,7 @@ function renderMainProduct() {
     document.getElementById("product-thumbnails");
     //   .classList.add(`grid-cols-${product.images.length}`);
     document.getElementById("product-thumbnails").innerHTML += `
-        <img src="${image}"
+        <img src="${imagePath + image}"
         id="${index}"
          alt="thumbnails-image"
             class="tumbnails-images h-18 cursor-pointer active:scale-95 object-cover rounded-lg border"/>`;
@@ -30,7 +33,8 @@ function renderMainProduct() {
     image.addEventListener("click", (val) => {
       const index = val.target.id;
       mainImageIndex = index;
-      document.getElementById("mainImage").src = product.images[mainImageIndex];
+      document.getElementById("mainImage").src =
+        imagePath + product.images[mainImageIndex];
       image.classList.add("border-red-900");
     });
   });
